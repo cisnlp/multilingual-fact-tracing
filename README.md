@@ -62,7 +62,7 @@ We provide the fact frequencies of facts in [KLAR](https://arxiv.org/pdf/2504.04
 However, we use [WIMBD](https://github.com/allenai/wimbd/) in our project since the statistics are much more reliable.
 
 - [`lang_rel_frequencies.json`](data/lang_rel_frequencies.json): computed by [WIMBD](https://github.com/allenai/wimbd/)
-- [`lang_rel_frequencies.json`](data/lang_rel_frequencies_infini.json): computed by [infini gram](https://infini-gram.readthedocs.io/en/latest/api.html)
+- [`lang_rel_frequencies_infini.json`](data/lang_rel_frequencies_infini.json): computed by [infini gram](https://infini-gram.readthedocs.io/en/latest/api.html)
 
 ### KLAR Parallel Texts
 
