@@ -10,7 +10,7 @@
 Large Language Models (LLMs) are known to memorize and recall factual knowledge across multiple languages. 
 However, the process through which this knowledge emerges during pretraining remains unclear.
 
-In this work, we investigate how multilingual factual recall and crosslingual consistency evolve over the course of pretraining, using **[OLMo-7B](https://huggingface.co/allenai/OLMo-7B-0424-hf)** and its acompanied checkpoints as a case study. We present empirical results demonstrating two key mechanisms of factual knowledge acquisition:
+In this work, we investigate how multilingual factual recall and crosslingual consistency evolve over the course of pretraining, using **[OLMo-7B](https://huggingface.co/allenai/OLMo-7B-0424-hf)** and its accompanying checkpoints as a case study. We present empirical results demonstrating two key mechanisms of factual knowledge acquisition:
 
 1. **Frequency-driven learning** (dominant and language-agnostic)
 2. **Crosslingual transfer** (notable in early pretraining, some non-English low-frequency facts benefit from it)
@@ -68,7 +68,7 @@ However, we use [WIMBD](https://github.com/allenai/wimbd/) in our project since 
 
 The texts are used to compute sentence representations and cosine similarities among facts of different languages (12 in total)
 
-- [`klar_variant_full`](data/klar_variant_full): each line in the file for a language is the translation of corresponding lines of other languages
+- [`klar_variant_full`](data/klar_variant_full): each line in the file for a language is the translation of the corresponding lines of other languages
 
 
 
@@ -77,16 +77,16 @@ The texts are used to compute sentence representations and cosine similarities a
 - Python 3.9+
 - [KLAR](https://arxiv.org/pdf/2504.04264) dataset for tracing multilingual factual recall (please refer to the corresponding github).
 - [vLLM](https://docs.vllm.ai/en/latest/) is used to obtain the factual recall response.
-- [WIMBD](https://github.com/allenai/wimbd/) is used to obtain the fact frequncies across languages.
+- [WIMBD](https://github.com/allenai/wimbd/) is used to obtain the fact frequencies across languages.
 
 
 ### Run Factual Recall Evaluation
 
-Example: Evaluate the `allenai/OLMo-7B-0424-hf` for each 1K step between checkpoint 0 and 50K.
+Example: Evaluate the `allenai/OLMo-7B-0424-hf` for each 1K step between checkpoints 0 and 50K.
 
 
 ```bash
-python filter_knowns_vllm_details.py 
+python factual_recall_vllm_with_details.py
   --model_name allenai/OLMo-7B-0424-hf
   --step_start 0 
   --step_end 50000 
@@ -95,7 +95,7 @@ python filter_knowns_vllm_details.py
 
 ### Run Fact Frequency Computation
 
-Using [WIMBD](https://github.com/allenai/wimbd/) (recommend, since it does not do approximation.)
+Using [WIMBD](https://github.com/allenai/wimbd/) (recommended, since it does not do approximation.)
 
 ```bash
 python frequency_computation_wimbd.py
@@ -124,9 +124,9 @@ python frequency_correctness.py
 ```
 
 
-To compute the sentence-level emebdding for each fact in each language 
-across checkpoints, e.g., for each 1K step between checkpoint 0 and 50K.
-(this script is adapted from [MEXA](https://github.com/cisnlp/MEXA/blob/main/embed_extractor.py)):
+To compute the sentence-level embedding for each fact in each language 
+across checkpoints, e.g., for each 1K step between checkpoints 0 and 50K.
+(This script is adapted from [MEXA](https://github.com/cisnlp/MEXA/blob/main/embed_extractor.py)):
 
 ```bash
 python embed_extractor.py 
@@ -145,7 +145,7 @@ python embed_extractor.py
 
 To compute the cosine similarity between facts in each language and their English counterparts 
 across checkpoints, e.g., for each 1K step between checkpoint 0 and 50K.
-(this script is adapted from [MEXA](https://github.com/cisnlp/MEXA/blob/main/compute_mexa.py)):
+(This script is adapted from [MEXA](https://github.com/cisnlp/MEXA/blob/main/compute_mexa.py)):
 
 ```bash
 python fact_similarity_compute.py 
@@ -167,7 +167,7 @@ python fact_similarity_compute.py
 
 ## Citation
 
-If you find our method, code and scores useful for your research, please considering citing:  
+If you find our method, code, and scores useful for your research, please consider citing:  
 
 
 KLAR dataset:
