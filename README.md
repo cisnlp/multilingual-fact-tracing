@@ -1,7 +1,7 @@
 # Tracing Multilingual Factual Knowledge Acquisition in Pretraining
 
 **Authors**: Yihong Liu, Mingyang Wang, Amir Hossein Kargaran, Felicia Körner, Ercong Nie, Barbara Plank, François Yvon, Hinrich Schütze  
-**Preprint**: [arXiv](https://arxiv.org/abs/placeholder)  
+**Preprint**: [arXiv](https://arxiv.org/abs/2505.14824)  
 
 ---
 
@@ -189,12 +189,13 @@ and this paper:
 
 ```bibtex
 @misc{liu2025tracing,
-  title={Tracing Multilingual Factual Knowledge Acquisition in Pretraining},
-  author={Yihong Liu and Mingyang Wang and Amir Hossein Kargaran and Felicia Körner and Ercong Nie and Barbara Plank and François Yvon and Hinrich Schütze},
-  year={2024},
-  eprint={placeholder},
-  archivePrefix={arXiv},
-  primaryClass={cs.CL}
+      title={Tracing Multilingual Factual Knowledge Acquisition in Pretraining}, 
+      author={Yihong Liu and Mingyang Wang and Amir Hossein Kargaran and Felicia Körner and Ercong Nie and Barbara Plank and François Yvon and Hinrich Schütze},
+      year={2025},
+      eprint={2505.14824},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2505.14824}
 }
 ```
 
